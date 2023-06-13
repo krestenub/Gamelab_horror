@@ -5,6 +5,7 @@ using UnityEngine;
 public class PressFToOnOff : MonoBehaviour
 { public GameObject Flashlight;
     public float PowerOnFlashlight;
+    public GameObject PhoneFlashlight;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,17 @@ public class PressFToOnOff : MonoBehaviour
                 {
 
                     Flashlight.SetActive(true);
+                }
+
+
+                if (PhoneFlashlight.activeSelf == true)
+                {
+                    PhoneFlashlight.SetActive(false);
+                }
+                else if (PhoneFlashlight.activeSelf == false)
+                {
+
+                    PhoneFlashlight.SetActive(true);
                 }
 
 
