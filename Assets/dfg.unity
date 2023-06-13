@@ -1127,14 +1127,14 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8875667, g: 0.8962264, b: 0.8004034, a: 1}
   m_Intensity: 1
   m_Range: 20
   m_SpotAngle: 50
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scale: 1
   speed: 3
-  MakeSourceStationary: 0
+  MakeSourceStationary: 1
   positionOffset: 0
 --- !u!1 &1159136238
 GameObject:
