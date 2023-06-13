@@ -646,6 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Flashlight: {fileID: 1033625042}
+  PowerOnFlashlight: 10
 --- !u!1 &785441341
 GameObject:
   m_ObjectHideFlags: 0
