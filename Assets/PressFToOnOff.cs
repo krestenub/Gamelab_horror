@@ -6,6 +6,7 @@ public class PressFToOnOff : MonoBehaviour
 { public GameObject Flashlight;
     public float PowerOnFlashlight;
     public GameObject PhoneFlashlight;
+    public GameObject defaltHand;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,16 @@ public class PressFToOnOff : MonoBehaviour
                 {
 
                     PhoneFlashlight.SetActive(true);
+                }
+
+                if (defaltHand.activeSelf == false)
+                {
+                    defaltHand.SetActive(true);
+                }
+                else if (defaltHand.activeSelf == true)
+                {
+
+                    defaltHand.SetActive(false);
                 }
 
 
