@@ -837,6 +837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033625044}
   - component: {fileID: 1033625043}
+  - component: {fileID: 1033625045}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Untagged
@@ -862,7 +863,7 @@ Light:
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -921,6 +922,22 @@ Transform:
   m_Father: {fileID: 599388734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1033625045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033625042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 1
+  speed: 3
+  MakeSourceStationary: 0
+  positionOffset: 0
 --- !u!1 &1159136238
 GameObject:
   m_ObjectHideFlags: 0
