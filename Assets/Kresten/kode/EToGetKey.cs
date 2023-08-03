@@ -21,11 +21,11 @@ public class EToGetKey : MonoBehaviour
     {
         //Kresten, lav et tag til din box der skal trigger
         // som hedder "TriggerBox"
-        if (other.tag == "TriggerBox")
+        if (other.tag == "Player")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Key.SetActive(true);
+                Key.SetActive(false);
             }
         }
     }
