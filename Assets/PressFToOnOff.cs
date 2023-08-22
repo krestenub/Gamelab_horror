@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PressFToOnOff : MonoBehaviour
 { public GameObject Flashlight;
     public float PowerOnFlashlight;
     public GameObject PhoneFlashlight;
     public GameObject defaltHand;
+    public Image batteri;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +16,10 @@ public class PressFToOnOff : MonoBehaviour
     }
 
     // Update is called once per frame
+   
     void Update()
     {
+        batteri.fillAmount = PowerOnFlashlight / 100;
         if (PowerOnFlashlight > 0)
         {
 
@@ -66,7 +70,7 @@ public class PressFToOnOff : MonoBehaviour
             Flashlight.SetActive(false);
         }
 
-        print(PowerOnFlashlight);
+       
 
     }
 }
