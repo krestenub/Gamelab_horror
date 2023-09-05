@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public List<int> InteractKey;
     // Start is called before the first frame update
     void Start()
     {

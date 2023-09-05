@@ -7,6 +7,8 @@ public class EToGetKey : MonoBehaviour
 { public GameObject Key;
     private bool KeyAllow;
     public GameObject TellKeyYes;
+    public GameObject Player;
+    public int keyID;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class EToGetKey : MonoBehaviour
             {
                 Key.SetActive(false);
                 TellKeyYes.SetActive(false);
+                Player.GetComponent<Inventory>().InteractKey.Add(keyID);
             }
         }
     }
