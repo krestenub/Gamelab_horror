@@ -5,6 +5,8 @@ using UnityEngine;
 public class EToGetKey : MonoBehaviour
    
 { public GameObject Key;
+    private bool KeyAllow;
+    public GameObject TellKeyYes;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,19 +16,35 @@ public class EToGetKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        if (KeyAllow)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Key.SetActive(false);
+                TellKeyYes.SetActive(false);
+            }
+        }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         //Kresten, lav et tag til din box der skal trigger
         // som hedder "TriggerBox"
         if (other.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Key.SetActive(false);
-            }
+            KeyAllow = true;
+            TellKeyYes.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        //Kresten, lav et tag til din box der skal trigger
+        // som hedder "TriggerBox"
+        if (other.tag == "Player")
+        {
+            KeyAllow = false;
+            TellKeyYes.SetActive(false); 
         }
     }
 }
+
