@@ -68,6 +68,8 @@ public class PressFToOnOff : MonoBehaviour
         else
         {
             Flashlight.SetActive(false);
+            defaltHand.SetActive(true);
+            PhoneFlashlight.SetActive(false);
         }
 
        

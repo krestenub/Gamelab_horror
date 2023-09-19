@@ -5,10 +5,19 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public int doorID;
+    public GameObject TellDoorYes;
+    private bool AllowPlayerPressE;
+    public Animator DoorMePlease;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+        if (AllowPlayerPressE)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                DoorMePlease.Play("OpenDoor");
+            }
+        }
     }
 
     // Update is called once per frame
@@ -24,9 +33,20 @@ public class Door : MonoBehaviour
             {
                 if(doorID==playerinventory.InteractKey[i])
                 {
-                    gameObject.SetActive(false);
+                    TellDoorYes.SetActive(true);
+                    AllowPlayerPressE = true;
                 }
             }
             }
         }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            TellDoorYes.SetActive(false);
+            AllowPlayerPressE = false;
+        }
+    }
 }
